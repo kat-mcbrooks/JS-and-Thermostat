@@ -3,7 +3,7 @@ const searchCandies = require('./candies');
 describe('searchCandies function', () => {
   it('returns Mars and Malteasers', () => {
     expect(searchCandies('ma', 10)).toEqual([  'Maltesers', 'Mars' ])
-  });
+     });
 
   it('returns Mars', () => {
     expect(searchCandies('ma', 2)).toEqual([ 'Mars' ])
