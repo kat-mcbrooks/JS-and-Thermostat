@@ -3,17 +3,18 @@
 class ShoppingBasket {
   constructor() {
     this.candies = [];
-    this.discount = 0 
+    this.discount = 0; 
   }
   applyDiscount(discount) {
-    discount = this.discount;
+    this.discount = discount;
   }
+
   getTotalPrice() {
     let totalPrice = 0;
     this.candies.map(candy => 
       totalPrice += candy.getPrice()
     );
-    return totalPrice; 
+    return totalPrice - this.discount;  
   }
   
    addItem(candy) {

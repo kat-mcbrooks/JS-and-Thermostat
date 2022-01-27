@@ -17,4 +17,21 @@ describe('ShoppingBasket', () => {
      basket.addItem(candyDouble);
     expect(basket.getTotalPrice()).toEqual(4.99);
   });
+
+  it('adds multiple items', () => {
+    const basket = new ShoppingBasket;
+     basket.addItem(candyDouble);
+     basket.addItem(candyDouble);
+     basket.addItem(candyDouble);
+    expect(basket.getTotalPrice()).toEqual(14.97);
+  });
+
+  it('adds multiple items and can apply discount', () => {
+    const basket = new ShoppingBasket;
+     basket.addItem(candyDouble);
+     basket.addItem(candyDouble);
+     basket.addItem(candyDouble);
+     basket.applyDiscount(4);
+    expect(basket.getTotalPrice()).toEqual(10.97);
+  });
 });
