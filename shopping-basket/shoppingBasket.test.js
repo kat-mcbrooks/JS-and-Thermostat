@@ -1,6 +1,6 @@
 // const Candy = require('./candy');
 const ShoppingBasket = require('./shoppingBasket')
-// double: 
+
 const candyDouble = { 
   getName: () => 'Mars', 
   getPrice: () => 4.99
@@ -14,10 +14,7 @@ describe('ShoppingBasket', () => {
 
   it('adds item', () => {
     const basket = new ShoppingBasket;
-    basket.addItem(candyDouble);
-    console.log(candyDouble);
-    console.log(basket.candies);
-    console.log(basket.getTotalPrice())
+     basket.addItem(candyDouble);
     expect(basket.getTotalPrice()).toEqual(4.99);
   });
 });
