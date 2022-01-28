@@ -13,7 +13,7 @@ class UserBase {
 
   getIntroductions() {
     return this.users.map(user => 
-      user.GetIntroduction()
+      user.getIntroduction()
       )
   }
 
