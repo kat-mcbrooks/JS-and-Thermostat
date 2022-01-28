@@ -8,7 +8,7 @@ describe('Thermostat', () => {
   it('max temperature is 32 when power saving mode is off', () => {
     const thermo = new Thermostat;
     thermo.setPowerSavingMode(false); 
-    for (let i = 0 ; i < 15 ; i++) {
+    for (let i = 0 ; i < 14 ; i++) {
       thermo.up();
     }
     expect(thermo.getTemperature()).toBe(32);

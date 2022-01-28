@@ -2,6 +2,7 @@ class Thermostat {
   constructor() {
     this.temperature = 20
     this.psmode = true // power saving mode begins on/true
+   
   }
   up() { 
     if (this.temperature < 25 && this.psmode) {  // sets max temp to 25 when psmode is on/true
