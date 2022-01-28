@@ -23,5 +23,17 @@ class Thermostat {
   setPowerSavingMode(status) {
      this.psmode = status;
     }
+  reset() {
+    this.temperature = 20;
+    }
+  energy_usage() {
+    if (this.temperature < 18) {
+      return 'low-usage';
+    }
+    else if (this.temperature > 25) {
+      return 'high-usage';
+    }
+    else { return 'medium-usage'; } 
+  }
   }
 module.exports = Thermostat;
