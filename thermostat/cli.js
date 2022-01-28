@@ -9,10 +9,8 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-// for (let i= 0 ; i<5 ; i++) 
-
 var recursiveAsyncReadLine = function () {
-  rl.question('Enter command', (answer) => {
+  rl.question('Enter command ', (answer) => {
     if (answer == 'up') {
       thermo1.up(); 
     }
